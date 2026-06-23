@@ -1,36 +1,85 @@
-# Head Pose Estimation (MediaPipe + OpenCV)
+# 🧠 Multimodal Cheating Detection System
 
-This module estimates **3D head pose** from video using facial landmarks and OpenCV PnP.
+This project is a **deep learning-based multimodal system** for detecting cheating behavior in online exams using:
 
-It is part of a multimodal cheating detection system.
-
----
-
-## 🧠 Method
-
-- Detect face landmarks (MediaPipe)
-- Map 2D points to 3D face model
-- Apply `cv2.solvePnP`
-- Extract head rotation (rvec) and translation (tvec)
+- Eye tracking
+- Head pose estimation
+- Object detection
+- (Future) Audio analysis
 
 ---
 
-## 📌 Key Landmarks
+## 🚀 Project Overview
 
-Nose, Chin, Eyes, Mouth corners
+The system analyzes student behavior in real-time and detects suspicious actions such as:
 
----
-
-## ⚙️ Output
-
-- Rotation vector (head direction)
-- Translation vector (position)
+- Looking away from the screen
+- Using mobile phones or external objects
+- Head movement patterns indicating distraction
+- Behavioral inconsistencies over time
 
 ---
 
-## 🚀 Run
+## 🧩 System Pipeline (4 Phases)
 
-```bash
-python head_pose.py
-cap.release()
-cv2.destroyAllWindows()
+### Phase 1 — Vision Modules
+- Eye tracking
+- Face landmarks
+- Head pose estimation
+- Object detection
+
+---
+
+### Phase 2 — Signal Processing
+- Noise filtering
+- Gaze smoothing
+- Coordinate normalization
+
+---
+
+### Phase 3 — Event Construction
+- Look-away detection
+- Object presence over time
+- Temporal event generation
+
+---
+
+### Phase 4 — Modeling
+- Deep learning / Transformer-based model
+- Temporal sequence analysis
+- Cheating probability prediction
+
+---
+
+## 🧠 Output
+
+The system outputs:
+
+- Normal behavior
+- Suspicious behavior
+- Cheating probability score
+
+---
+
+## 🛠️ Technologies
+
+- Python
+- OpenCV
+- MediaPipe
+- YOLO
+- Deep Learning (Transformer-ready pipeline)
+
+---
+
+## 📌 Future Work
+
+- Audio analysis module
+- EEG signal integration (simulation/real)
+- Multimodal Transformer fusion
+- Real-time deployment system
+
+---
+
+## 👨‍💻 Status
+
+Project is under active development and being extended into a research-level multimodal system.
